@@ -1,0 +1,27 @@
+mmnet
+#setup dietPi: DietPi/config.txt
+#dtparam=spi=on
+#dpraram=i2c=on
+
+
+
+ifconfig eth0
+apt-get update
+apt-get install mc
+apt-get install subversion
+#apt-get install libc-dev
+mkdir /srv/madar
+
+#tftp -g -t storage/rcl
+#tftp -g -t storage/rcpstart
+#tftp -g -r storage/rcpstop
+#tftp -g -r /etc/init.d/rcpm
+#chmod a+x *
+
+ 
+ 
+ /etc/rc.d/@S61rcpm
+
+
+# list Usb
+#ls /dev/tty*

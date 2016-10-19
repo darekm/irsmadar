@@ -1,0 +1,27 @@
+apt-get update
+apt-get install mc
+mkdir /srv/madar
+cd /srv/madar
+echo "start tftp"
+#tftp -g -r icl 192.168.10.124
+#tftp -g -r irsstart 192.168.10.124
+#tftp -g -r irsstop 192.168.10.124
+#tftp -g -r irsm 192.168.10.124
+#tftp -g -r network 192.168.10.124
+#tftp -g -r httpd 192.168.10.124
+#tftp -g -r update_irs 192.168.10.124
+#tftp -g -r dane.dat 192.168.10.124
+#tftp -g -r mwatchdog 192.168.10.124
+
+echo "start copying"
+#cp network /etc/config/network
+
+chmod a+x *
+#./icl
+chmod a+x *
+echo "start etc"
+cp rc.local /etc/rc.local
+#ln -s /etc/init.d/irsm /etc/rc.d/S56irsm
+./irsupgrade
+chmod a+x irsmobile
+
